@@ -14,11 +14,11 @@ namespace WeKey
 {
     public partial class Form1 : Form
     {
-        const string GistUrl = "https://gist.github.com/Altyd/9d822a3525f4e09222e975523ed52fb8";
+        const string PastebinUrl = "https://gist.githubusercontent.com/Altyd/9d822a3525f4e09222e975523ed52fb8/raw/6776a72535d6b927783c8f6150a478ba400a90e7/"; 
+
         public Form1()
         {
             InitializeComponent();
-   
         }
 
         private async void button1_Click(object sender, EventArgs e)
@@ -28,10 +28,14 @@ namespace WeKey
                 string password = key.Text;
 
                 string hashedPassword = ComputeSha256Hash(password);
+                MessageBox.Show($"Computed Hash: {hashedPassword}"); // Debug output
 
-                string[] storedHashes = await FetchHashesFromGist();
+                string[] storedHashes = await FetchHashesFromPastebin();
+                MessageBox.Show($"Fetched Hashes from Github:\n\n{string.Join("\n", storedHashes)}"); // Display the fetched hashes
+
                 if (storedHashes.Contains(hashedPassword, StringComparer.OrdinalIgnoreCase)) // Case insensitive comparison
                 {
+                    MessageBox.Show($"Fetched Hashes from Github:\n\n{string.Join("\n", storedHashes)}"); // Display the fetched hashes
                     MessageBox.Show("Password is correct.");
                 }
                 else
@@ -44,17 +48,26 @@ namespace WeKey
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
-        static async Task Main(string[] args)
-        {
 
-        }
-
-        private static async Task<string[]> FetchHashesFromGist()
+        private static async Task<string[]> FetchHashesFromPastebin()
         {
             using (HttpClient client = new HttpClient())
             {
-                string content = await client.GetStringAsync(GistUrl);
-                return content.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Select(hash => hash.Trim()).ToArray();
+                HttpResponseMessage response = await client.GetAsync(PastebinUrl);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show($"Failed to fetch Github content. HTTP Status: {response.StatusCode}");
+                    return new string[0];
+                }
+
+                string content = await response.Content.ReadAsStringAsync();
+                MessageBox.Show($"Raw Content from Github:\n\n{content}"); // Display raw content
+
+                return content.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries)
+                              .Select(hash => hash.Trim())
+                              .Where(hash => !string.IsNullOrEmpty(hash))
+                              .ToArray();
             }
         }
 
@@ -75,4 +88,3 @@ namespace WeKey
         }
     }
 }
-
