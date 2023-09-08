@@ -1,0 +1,22 @@
+D:\github\wekey\WeKey\WeKey\bin\Debug\WeKey.exe.config
+D:\github\wekey\WeKey\WeKey\bin\Debug\WeKey.exe
+D:\github\wekey\WeKey\WeKey\bin\Debug\WeKey.pdb
+D:\github\wekey\WeKey\WeKey\obj\Debug\WeKey.csproj.AssemblyReference.cache
+D:\github\wekey\WeKey\WeKey\obj\Debug\WeKey.csproj.SuggestedBindingRedirects.cache
+D:\github\wekey\WeKey\WeKey\obj\Debug\WeKey.Form1.resources
+D:\github\wekey\WeKey\WeKey\obj\Debug\WeKey.Properties.Resources.resources
+D:\github\wekey\WeKey\WeKey\obj\Debug\WeKey.csproj.GenerateResource.cache
+D:\github\wekey\WeKey\WeKey\obj\Debug\WeKey.csproj.CoreCompileInputs.cache
+D:\github\wekey\WeKey\WeKey\obj\Debug\WeKey.exe
+D:\github\wekey\WeKey\WeKey\obj\Debug\WeKey.pdb
+D:\github\wekey\Example Win Forms\WeKey\WeKey\obj\Debug\WeKey.csproj.AssemblyReference.cache
+D:\github\wekey\Example Win Forms\WeKey\WeKey\obj\Debug\WeKey.csproj.SuggestedBindingRedirects.cache
+D:\github\wekey\Example Win Forms\WeKey\WeKey\obj\Debug\WeKey.Form1.resources
+D:\github\wekey\Example Win Forms\WeKey\WeKey\obj\Debug\WeKey.Properties.Resources.resources
+D:\github\wekey\Example Win Forms\WeKey\WeKey\obj\Debug\WeKey.csproj.GenerateResource.cache
+D:\github\wekey\Example Win Forms\WeKey\WeKey\obj\Debug\WeKey.csproj.CoreCompileInputs.cache
+D:\github\wekey\Example Win Forms\WeKey\WeKey\obj\Debug\WeKey.exe
+D:\github\wekey\Example Win Forms\WeKey\WeKey\obj\Debug\WeKey.pdb
+D:\github\wekey\Example Win Forms\WeKey\WeKey\bin\Debug\WeKey.exe.config
+D:\github\wekey\Example Win Forms\WeKey\WeKey\bin\Debug\WeKey.exe
+D:\github\wekey\Example Win Forms\WeKey\WeKey\bin\Debug\WeKey.pdb
