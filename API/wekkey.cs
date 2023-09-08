@@ -12,7 +12,7 @@ namespace WeKey
     public class wekeyapi
     {
         // URL of the raw Github Gist containing password hashes
-        private const string GistUrl = "https://gist.githubusercontent.com/Altyd/9d822a3525f4e09222e975523ed52fb8/raw/6776a72535d6b927783c8f6150a478ba400a90e7/";
+        private const string GistUrl = ""; //Your Github Gist Link
         private static readonly HttpClientHandler _handler = new HttpClientHandler
         {
             ServerCertificateCustomValidationCallback = CustomCertificateValidation
